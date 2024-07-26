@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="Admin_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            text-align: center;
+            color: #660033;
+            height: 49px;
+            font-size: xx-large;
+            background-color: #FF6600;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="style1">
+            <tr>
+                <td class="style2">
+                    <strong>Banking Automation System</strong></td>
+            </tr>
+            <tr>
+                <td style="background-color: #CCCCFF">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#990000" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+                        style="font-weight: 700; font-size: x-large; color: #CCCC00; background-color: #CCCCFF">
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Admin/New_Account_Open.aspx" Target="new" 
+                                Text="New Account" Value="New Account"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Search.aspx" Target="new" Text="Search" 
+                                Value="Search"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/All_Customer.aspx" Target="new" 
+                                Text="All Customer" Value="All Customer"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Transaction.aspx" Target="new" 
+                                Text="Transaction" Value="Transaction"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Statement.aspx" Target="new" 
+                                Text="Statement" Value="Statement"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Mobile_Transaction.aspx" Target="new" 
+                                Text="Mobile Transaction" Value="Mobile Transaction"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/View_Request.aspx" Target="new" 
+                                Text="View Request " Value="View Request "></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/logout.aspx" Text="Log-out" 
+                                Value="Log-out"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="5px" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                    </asp:Menu>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
